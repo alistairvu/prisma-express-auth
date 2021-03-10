@@ -1,0 +1,19 @@
+{
+  "name": "prisma-user-auth",
+  "version": "1.0.0",
+  "main": "backend/server.ts",
+  "license": "MIT",
+  "prisma": {
+    "schema": "./backend/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.18.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.5.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
