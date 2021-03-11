@@ -21,6 +21,6 @@
   },
   "scripts": {
     "dev": "concurrently \"nodemon\" \"cd frontend && yarn start\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd frontend && yarn && yarn run build && cd .."
+    "heroku-postbuild": "cd frontend && yarn && yarn run build && cd .."
   }
 }
