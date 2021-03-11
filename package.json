@@ -6,6 +6,10 @@
   "prisma": {
     "schema": "./backend/prisma/schema.prisma"
   },
+  "engines": {
+    "ts-node": "9.1.1",
+    "yarn": "1.22.5"
+  },
   "dependencies": {
     "@prisma/client": "^2.18.0",
     "@types/bcryptjs": "^2.4.2",
