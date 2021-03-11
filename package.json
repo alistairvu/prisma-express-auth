@@ -1,7 +1,7 @@
 {
   "name": "prisma-user-auth",
   "version": "1.0.0",
-  "main": "backend/server.ts",
+  "main": "./backend/server.ts",
   "license": "MIT",
   "prisma": {
     "schema": "./backend/prisma/schema.prisma"
