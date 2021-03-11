@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import { useDispatch, useSelector } from "react-redux"
 import { rootState } from "../redux"
-import { registerUser } from "../redux/user"
+import { registerUser, resetError } from "../redux/user"
 import { Alert } from "react-bootstrap"
 import { useHistory, Redirect } from "react-router-dom"
 import { LinkContainer } from "react-router-bootstrap"
@@ -26,10 +26,11 @@ export const RegisterPage = () => {
   const history = useHistory()
 
   useEffect(() => {
+    dispatch(resetError())
     if (userInfo.id) {
       history.replace("/home")
     }
-  }, [history, userInfo.id])
+  }, [history, userInfo.id, dispatch])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.name === "confirmPassword") {

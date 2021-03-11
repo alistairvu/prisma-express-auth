@@ -20,10 +20,11 @@ export const LoginPage = () => {
   const history = useHistory()
 
   useEffect(() => {
+    dispatch(resetError())
     if (userInfo.id) {
       history.replace("/home")
     }
-  }, [history, userInfo.id])
+  }, [history, userInfo.id, dispatch])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoginInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }))
