@@ -25,6 +25,6 @@
   },
   "scripts": {
     "dev": "concurrently \"nodemon\" \"cd frontend && yarn start\"",
-    "heroku-postbuild": "cd frontend && yarn && yarn build && cd .."
+    "heroku-postbuild": "prisma generate && cd frontend && yarn && yarn build && cd .."
   }
 }
